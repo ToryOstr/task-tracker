@@ -1,0 +1,54 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  margin: 10%;
+  padding: 1.2rem;
+  border: 2px solid black;
+  border-radius: 15px;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  padding: 3px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.addTask {
+  width: 100%;
+  border: none;
+  padding:  0  0 0 5px;
+}
+
+.addTask::placeholder{
+  color: rgb(144, 144, 144);
+}
+
+.addTask:focus{
+  outline: none;
+}
+
+.addBtn {
+  width: 40px;
+  height: 40px;
+  padding: 0px 8px 5px 0px;
+  border-radius: 8px;
+  background-color: black;
+}
+.addBtn .icon {
+  display: block;
+  margin: auto;
+  height: 100%;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.addBtn:hover .icon {
+  color: rgb(26, 247, 26);
+}
