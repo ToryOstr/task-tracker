@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,20 +8,26 @@
   <link rel="stylesheet" href="./css/index.css">
   <title>Task Tracker</title>
 </head>
+
 <body>
   <section class="main">
     <H1>Task Tracker</H1>
     <div class="wrapper">
-      <input class="addTask" type="text" placeholder="Start writing and press enter to create  task" name="addTask" id="addTask">
+      <input class="addTask" type="text" placeholder="Start writing and press enter to create  task" name="addTask"
+        id="addTask">
       <button class="addBtn" type="submit">
-        <svg class="icon" width="auto" height="auto" >
+        <svg class="icon" width="100%" height="100%">
           <use href="./img/InlineSprite.svg#corner-arrow"></use>
         </svg>
       </button>
 
     </div>
 
-
+    <ul class="tasksList">
+      
+    </ul>
   </section>
+  <script src="./script.js"></script>
 </body>
+
 </html>
