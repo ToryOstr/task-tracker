@@ -4,22 +4,23 @@
   --accent-color-input-btn: rgb(21, 232, 21);
   --accent-color-del-btn: rgb(205, 8, 8);
 }
-
 .main {
   display: flex;
   flex-direction: column;
-  margin: 10%;
+  width: 50%;
+  min-height: 300px;
+  margin: 10% auto;
   padding: 1.2rem;
   border: 2px solid var(--main-text-color);
   border-radius: 15px;
   justify-content: center;
   color: var(--main-text-color);
+  font-size: 18px;
 }
-
 h1 {
+  font-size: 32px;
   text-align: center;
 }
-
 .wrapper {
   display: flex;
   width: 100%;
@@ -27,21 +28,18 @@ h1 {
   border: 2px solid var(--main-text-color);
   border-radius: 10px;
 }
-
 .addTask {
   width: 100%;
   border: none;
   padding: 0 0 0 5px;
 }
-
 .addTask::placeholder {
+  font-size: 16px;
   color: var(--accent-text);
 }
-
 .addTask:focus {
   outline: none;
 }
-
 .addBtn {
   width: 40px;
   height: 40px;
@@ -56,7 +54,6 @@ h1 {
   color: #fff;
   transition: 0.3s;
 }
-
 .addBtn:hover .icon {
   color: var(--accent-color-input-btn);
 }
@@ -92,12 +89,10 @@ input[type="checkbox"] {
   display: block;
   width: 15px;
   height: 15px;
-
   border: 1px solid var(--main-text-color);
   background-color: transparent;
   border-radius: 5px;
 }
-
 input:checked ~ .checkmark {
   background-color: var(--accent-text);
 }

@@ -23,6 +23,7 @@ addNewTaskBtn.addEventListener('click', () => {
   addNewTask(text);
   renderTasks();
 });
+
 inputTask.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
     const text = inputTask.value;
@@ -63,10 +64,8 @@ function renderTasks() {
         </svg>
       </button>
       </li>`}).join('');
-
   }
   saveToLocalStorage();
-
 }
 
 function addNewTask(text) {
@@ -79,7 +78,6 @@ function addNewTask(text) {
   });
   inputTask.value = '';
   renderTasks();
-
 };
 
 function deleteTask(id) {
@@ -87,6 +85,7 @@ function deleteTask(id) {
   saveToLocalStorage();
   renderTasks();
 };
+
 function moveTask() {
   allTasks = allTasks.sort((a, b) => a.isDone - b.isDone)
 }
