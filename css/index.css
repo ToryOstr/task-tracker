@@ -17,6 +17,12 @@
   color: var(--main-text-color);
   font-size: 18px;
 }
+@media(max-width:768px)  {
+  .main{
+    width: 100%;
+    margin: 10px auto;
+  }
+}
 h1 {
   font-size: 32px;
   text-align: center;
