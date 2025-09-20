@@ -23,20 +23,28 @@ addNewTaskBtn.addEventListener('click', () => {
   addNewTask(text);
   renderTasks();
 });
+inputTask.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    const text = inputTask.value;
+    addNewTask(text);
+    renderTasks();
+  }
+});
 
 ul.addEventListener('click', (e) => {
   const li = e.target.closest('li');
   if (!li) return;
   const id = Number(li.id);
-  
-  if (e.target.dataset.action === 'delete'){
+
+  if (e.target.dataset.action === 'delete') {
     deleteTask(id);
-  } else if (e.target.dataset.action === 'toggle' ){
+  } else if (e.target.dataset.action === 'toggle') {
     toggleTask(id);
   }
 });
 
 function renderTasks() {
+  moveTask();
   if (allTasks.length === 0) {
     ul.innerHTML = `
     <li class="taskItem">
@@ -79,6 +87,9 @@ function deleteTask(id) {
   saveToLocalStorage();
   renderTasks();
 };
+function moveTask() {
+  allTasks = allTasks.sort((a, b) => a.isDone - b.isDone)
+}
 
 function toggleTask(id) {
   allTasks = allTasks.map(task =>
